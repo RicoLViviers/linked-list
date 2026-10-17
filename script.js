@@ -60,6 +60,15 @@ class LinkedList {
         }
         return temp;
     }
+
+    at(index) {
+        let temp = this.head;
+        for (let i=0; i<index; i++) {
+            temp = temp.next;
+        } 
+
+        return temp ? temp : undefined;
+    }
 }
 
 let list = new LinkedList(10);
