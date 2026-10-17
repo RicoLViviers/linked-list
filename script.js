@@ -38,6 +38,16 @@ class LinkedList {
         newNode.next = this.head;
         this.head = newNode;
     }
+
+    size() {
+        let temp = this.head;
+        let size = 0;
+        while (temp !== null) {
+            temp = temp.next;
+            size++;
+        }
+        return size;
+    }
 }
 
 let list = new LinkedList(10);
