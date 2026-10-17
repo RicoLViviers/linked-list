@@ -67,11 +67,25 @@ class LinkedList {
 
         return temp ? temp : undefined;
     }
+
+    pop () {
+        if (this.head === null) {
+            return null;
+        }
+
+        let temp = this.head
+        this.head = this.head.next;
+
+        temp = null;
+
+        return this.head;
+    }
 }
 
 let list = new LinkedList(10);
 
 list.append(20);
 list.append(30);
+list.pop();
 
 console.log(JSON.stringify(list, null, 4));
