@@ -48,6 +48,10 @@ class LinkedList {
         }
         return size;
     }
+
+    head() {
+        return this.head;
+    }
 }
 
 let list = new LinkedList(10);
