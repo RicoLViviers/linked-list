@@ -29,8 +29,6 @@ class LinkedList {
         }
 
         temp.next = newNode;
-
-        this.head = temp;
     }
 
     prepend(value) {
@@ -73,4 +71,7 @@ class LinkedList {
 
 let list = new LinkedList(10);
 
-console.log(list);
+list.append(20);
+list.append(30);
+
+console.log(JSON.stringify(list, null, 4));
