@@ -52,6 +52,14 @@ class LinkedList {
     head() {
         return this.head;
     }
+
+    tail() {
+        let temp = this.head;
+        while (temp.next!== null) {
+            temp = temp.next;
+        }
+        return temp;
+    }
 }
 
 let list = new LinkedList(10);
