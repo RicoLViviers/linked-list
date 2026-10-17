@@ -32,6 +32,12 @@ class LinkedList {
 
         this.head = temp;
     }
+
+    prepend(value) {
+        let newNode = new Node(value);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
 }
 
 let list = new LinkedList(10);
