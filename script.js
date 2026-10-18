@@ -80,6 +80,21 @@ class LinkedList {
 
         return this.head;
     }
+
+    contains(value) {
+        let temp = this.head;
+        if (temp.data === value) {
+            return true;
+        }
+        while (temp.next !== null) {
+            temp = temp.next
+            if (temp.data === value) {
+                return true;
+            }
+
+        }
+        return false;
+    }
 }
 
 let list = new LinkedList(10);
@@ -87,5 +102,8 @@ let list = new LinkedList(10);
 list.append(20);
 list.append(30);
 list.pop();
+
+console.log(list.contains(20))
+console.log(list.contains(33))
 
 console.log(JSON.stringify(list, null, 4));
