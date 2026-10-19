@@ -95,6 +95,23 @@ class LinkedList {
         }
         return false;
     }
+
+    findIndex(value) {
+        let index = 0;
+        let temp = this.head;
+        if (temp.data === value) {
+            return index;
+        }
+        while (temp.next !== null) {
+            index ++;
+            temp = temp.next
+            if (temp.data === value) {
+                return index;
+            }
+
+        }
+        return -1;
+    }
 }
 
 let list = new LinkedList(10);
@@ -107,3 +124,4 @@ console.log(list.contains(20))
 console.log(list.contains(33))
 
 console.log(JSON.stringify(list, null, 4));
+console.log(list.findIndex(20))
