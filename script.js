@@ -112,6 +112,24 @@ class LinkedList {
         }
         return -1;
     }
+
+    toString() {
+        let temp = this.head
+        
+        if (!temp) {
+            return "";
+        } 
+        let stringValue = "";
+
+        while (temp) {
+            stringValue += "( " + temp.data + " ) -> ";
+            temp = temp.next;
+        }
+
+        stringValue += "( null )";
+
+        return stringValue;
+    }
 }
 
 let list = new LinkedList(10);
@@ -125,3 +143,4 @@ console.log(list.contains(33))
 
 console.log(JSON.stringify(list, null, 4));
 console.log(list.findIndex(20))
+console.log(list.toString())
