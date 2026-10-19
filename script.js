@@ -48,10 +48,6 @@ class LinkedList {
         return size;
     }
 
-    head() {
-        return this.head;
-    }
-
     tail() {
         let temp = this.head;
         while (temp.next!== null) {
@@ -149,3 +145,4 @@ console.log(list.contains(33))
 console.log(JSON.stringify(list, null, 4));
 console.log(list.findIndex(20))
 console.log(list.toString())
+console.log(list.head)
