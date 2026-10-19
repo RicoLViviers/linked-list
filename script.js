@@ -11,8 +11,8 @@ class Node {
 }
 
 class LinkedList {
-    constructor (data) {
-        this.head = new Node(data);
+    constructor () {
+        this.head = null;
     }
     append(value)
     {
@@ -20,11 +20,12 @@ class LinkedList {
         
         if (this.head === null) {
             this.head = newNode;
+            return;
         }
 
         let temp = this.head;
 
-        while (temp.next !== null) {
+        while (temp.next) {
             temp = temp.next;
         }
 
@@ -132,10 +133,14 @@ class LinkedList {
     }
 }
 
-let list = new LinkedList(10);
+let list = new LinkedList();
 
+list.append(10);
 list.append(20);
 list.append(30);
+list.append(40);
+list.append(50);
+list.append(60);
 list.pop();
 
 console.log(list.contains(20))
